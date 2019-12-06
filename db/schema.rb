@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2019_12_05_105957) do
-=======
 ActiveRecord::Schema.define(version: 2019_12_05_060124) do
->>>>>>> newDb
 
   create_table "bought_products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "product_id"
@@ -149,37 +145,6 @@ ActiveRecord::Schema.define(version: 2019_12_05_060124) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-<<<<<<< HEAD
-  create_table "testproduct_images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "product_id", null: false
-    t.string "image", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "topsproduct_images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "product_id", null: false
-    t.string "image", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "topsproducts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "category_id", null: false
-    t.integer "brand_id"
-    t.text "description", null: false
-    t.integer "status", null: false
-    t.integer "who_charge_shipping", null: false
-    t.integer "way_of_shipping", null: false
-    t.integer "shipping_region", null: false
-    t.integer "how_long_shipping", null: false
-    t.integer "price", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-=======
   add_foreign_key "bought_products", "products"
   add_foreign_key "bought_products", "user_profiles"
   add_foreign_key "bought_products", "user_profiles", column: "buyer_id"
@@ -196,5 +161,4 @@ ActiveRecord::Schema.define(version: 2019_12_05_060124) do
   add_foreign_key "sold_products", "user_profiles", column: "buyer_id"
   add_foreign_key "user_addresses", "user_profiles"
   add_foreign_key "user_profiles", "users"
->>>>>>> newDb
 end
