@@ -1,0 +1,10 @@
+%ul.new__item
+  - @topsproducts.each do |topsproduct|
+    = link_to do
+      %li.item
+        .item__picture{style: "background-image: url();"}
+          .item__capital
+            ¥
+            = topsproduct.price
+          .item__caption
+            = topsproduct.name
